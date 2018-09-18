@@ -6,10 +6,12 @@ Scripts have to be ececuted in a parent directory of a project or a workspace wi
 
 Know your most used lines
 ```bash
-bash know.sh \"*.go\" > output-go.txt
+cd $HOME
+bash lines.sh \"*.go\" > output-go-lines.txt
 ```
 
 Know your most used words
 ```bash
-bash words.sh \"*.go\" > output-go.txt
+cd $HOME
+bash words.sh \"*.go\" > output-go-words.txt
 ```
