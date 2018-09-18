@@ -7,11 +7,11 @@ Scripts have to be ececuted in a parent directory of a project or a workspace wi
 Know your most used lines
 ```bash
 cd $HOME
-bash lines.sh \"*.go\" > output-go-lines.txt
+bash lines.sh "*.go" > output-go-lines.txt
 ```
 
 Know your most used words
 ```bash
 cd $HOME
-bash words.sh \"*.go\" > output-go-words.txt
+bash words.sh "*.go" > output-go-words.txt
 ```
