@@ -12,3 +12,7 @@ DIR_PATH=$1
 NAME=$2
 
 find $DIR_PATH -name $NAME | grep -v "#" | xargs cat | sed 's/^[\t ]*//g' | sed 's/[\t ]*$//g' | sort | uniq -c | sort -n
+
+echo "Total count:"
+find $DIR_PATH -name $NAME | grep -v "#" | xargs cat | sed 's/^[\t ]*//g' | sed 's/[\t ]*$//g' | wc -l
+
