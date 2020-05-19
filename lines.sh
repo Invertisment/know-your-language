@@ -1,10 +1,14 @@
 #!/bin/bash
 
-if [ $# -eq 0 ]
+if [ $# -ne 2 ]
   then
     echo "Usage:"
-    echo "go to your source directory"
-    echo "$@ \"*.go\" > output-go.txt"
+    echo "bash $0 <relative directory> <filename pattern>"
+    echo "$0 "./../path_to_a_project" \"*.go\" > output-go.txt"
+    exit 1
   fi
 
-find -name $1 | grep -v "#" | xargs cat | sed 's/^[\t ]*//g' | sed 's/[\t ]*$//g' | sort | uniq -c | sort -n
+DIR_PATH=$1
+NAME=$2
+
+find $DIR_PATH -name $NAME | grep -v "#" | xargs cat | sed 's/^[\t ]*//g' | sed 's/[\t ]*$//g' | sort | uniq -c | sort -n
